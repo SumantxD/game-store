@@ -1,6 +1,7 @@
 
 import { ShoppingCart, User, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom'; // Add this import
 
 interface HeaderProps {
   cartItemCount: number;
@@ -26,9 +27,9 @@ export const Header = ({ cartItemCount, onCartClick }: HeaderProps) => {
               <a href="#" className="text-gray-300 hover:text-white transition-colors">
                 Accessories
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                Deals
-              </a>
+              <Link to="/admin" className="text-gray-300 hover:text-white transition-colors">
+                Admin
+              </Link>
             </nav>
           </div>
 
